@@ -1,0 +1,325 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+h1,h2 {
+	font-weight: normal;
+}
+i {
+	font-style: normal;
+}
+b {
+	font-weight: normal;
+}
+ul {
+	list-style: none;
+}
+body {
+	color: #ccc;
+	font-size: 15px;
+	font-family: "Microsoft Yahei";
+}
+.wrapper {
+	margin: 0 auto;
+	width: 1024px;
+	height: 768px;
+	background-color: #3c3c3c;
+}
+.header {
+	padding: 0 10px;
+	height: 58px;
+	line-height: 58px;
+	font-size: 22px;
+	background-color: #d3d3d3;
+}
+h1 {
+	color: #000;
+	font-size: 24px;
+	font-weight: normal;
+	font-family: "黑体";
+}
+.header {
+	overflow: hidden;
+}
+.header .left {
+	float: left; 
+	height: 58px;
+}
+.header .left h1,
+#scroll-left {
+	float: left;
+}
+#scroll-left {
+	width: 550px;
+	color: #4c4c4c;
+	font-size: 22px;
+	overflow: hidden;
+}
+.header .right {
+	float: right;
+	margin-right: 10px;
+	color: #000;
+}
+.header .right i {
+	margin-right: 24px;
+}
+.part-1 {
+	/*border: 11px solid #5b5b5b;*/
+	overflow: hidden;
+}
+.part-1 .left {
+	float: left;
+	padding: 14px 27px;
+	width: 587px;
+	/*border-right: 11px solid #5b5b5b;*/
+}
+.part-1 h2 {
+	color: #fcff00;
+	font-size: 22px;
+	font-family: "黑体";
+}
+.part-1 .wrap-table {
+	overflow: hidden;
+}
+.part-1 .wrap-table .table-left {
+	float: left;
+}
+.part-1 .wrap-table .table-right {
+	float: right;
+}
+.part-1 .right {
+	float: right;
+	padding: 14px 27px;
+	width: 293px;
+}
+.part-1 .right .top {
+	margin: 20px 0 25px 0;
+	overflow: hidden;
+}
+.part-1 .right .top .t_num,
+.part-1 .right .btm .t_num {
+	overflow: hidden;
+}
+.part-1 .right .top i {
+	float: left;
+	margin-right: 2px;
+	width: 37px;
+	height: 42px;
+	background: url(../images/big-num.png) no-repeat;
+}
+.part-1 .right .top .hours {
+	margin-right: 50px;
+}
+.part-1 .right .top .hours,
+.part-1 .right .top .total {
+	float: left;
+	width: 119px;
+}
+.part-1 .right p {
+	margin-bottom: 12px;
+	font-size: 18px;
+	text-align: center;
+}
+.part-1 .right .btm {
+	overflow: hidden;
+}
+.part-1 .right .btm i {
+	float: left;
+	margin-right: 2px;
+	width: 24px;
+	height: 44px;
+	background: url(../images/small-num.png) no-repeat;
+}
+.part-1 .right .btm .mass,
+.part-1 .right .btm .material,
+.part-1 .right .btm .beat {
+	float: left;
+	width: 81px;
+}
+.part-1 .right .btm .mass,
+.part-1 .right .btm .material {
+	margin-right: 23px;
+}
+.part-1 .right div .last {
+	margin-right: 0;
+}
+.part-2 {
+	padding: 9px 0 9px 15px;
+	overflow: hidden;
+}
+.part-2 .top {
+	height: 154px;
+}
+.part-2 .btm{
+	position: relative;
+	margin-top: 31px;
+	height: 123px;
+}
+.part-2 li {
+	float: left;
+	margin-right: 52px;
+	width: 105px;
+}
+.part-2 li p {
+	font-size: 18px;
+	text-align: center;
+}
+.part-2 .top p {
+	margin-bottom: 10px;
+}
+.part-2 .btm p {
+	margin-top: 10px;
+}
+.part-2 li div {
+	position: relative;
+	width: 99px;
+	height: 84px;
+}
+.part-2 li div span {
+	position: absolute;
+	left: 50%;
+	margin-left: -11px;
+	width: 22px;
+	height: 36px;
+}
+.down {
+	bottom: -36px;
+	background: url(../images/8.png) no-repeat;
+}
+.up {
+	top: -36px;
+	background: url(../images/9.png) no-repeat;
+}
+.part-2 .deviceU .status-1 div {
+	background: url(../images/status-1.gif) no-repeat;
+}
+.part-2 .deviceU .status-2 div {
+	background: url(../images/status-2.png) no-repeat;
+}
+.part-2 .deviceU .status-3 div {
+	background: url(../images/status-3.gif) no-repeat;
+}
+.part-2 .deviceU .status-4 div {
+	background: url(../images/status-4.gif) no-repeat;
+}
+.part-2 .deviceU .status-5 div {
+	background: url(../images/status-5.gif) no-repeat;
+}
+.part-2 .deviceU .status-6 div {
+	background: url(../images/status-6.gif) no-repeat;
+}
+.part-2 .center {
+	position: relative;
+	padding-left: 23px;
+	width: 677px;
+	height: 49px;
+}
+
+#z1{
+    left: 240px;
+    position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 20px;
+	text-align: center;
+}
+#z2{
+    left: 530px;
+    position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 20px;
+	text-align: center;
+}
+#z3{
+    right: -15px;
+    position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	font-size: 20px;
+	text-align: center;
+}
+.part-2 .deviceZ .status-1 {
+	background: url(../images/z-status-1.png) no-repeat;
+}
+.part-2 .deviceZ .status-2 {
+	background: url(../images/z-status-2.png) no-repeat;
+}
+.part-2 .deviceZ .status-3 {
+	background: url(../images/z-status-3.png) no-repeat;
+}
+.part-2 .deviceZ .status-4 {
+	background: url(../images/z-status-4.gif) no-repeat;
+}
+.part-2 .deviceZ .status-5 {
+	background: url(../images/z-status-5.gif) no-repeat;
+}
+.part-2 .deviceZ .status-6 {
+	background: url(../images/z-status-6.gif) no-repeat;
+}
+
+#wrap-img {
+	width: 677px;
+	overflow: hidden;
+}
+#left-div,
+#scroll-right  {
+	white-space: nowrap;
+}
+#scroll-right i {
+	display: inline-block;
+	width: 677px;
+	height: 45px;
+	background: url(../images/4.png) no-repeat; 
+}
+.part-2 .left {
+	float: left;
+	width: 700px;
+	color: #fff;
+}
+.part-2 .right {
+	float: left;
+    margin-left:40px;
+	padding-top: 30px;
+}
+.part-2 .right  h2 {
+	margin-bottom: 15px;
+	font-size: 24px;
+}
+.part-2 .right p {
+	margin-bottom: 23px;
+}
+.part-2 .right p span {
+	margin-right: 3px;
+}
+.icon {
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	line-height: 21px;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	background: url(../images/icon-sprite.png);
+}
+.icon-gray {
+	background-position: 0 -31px;
+}
+.icon-orange {
+	background-position: 0 0;
+}
+.icon-green {
+	background-position: -33px 0;
+}
+.icon-red {
+	background-position: -70px 0;
+}

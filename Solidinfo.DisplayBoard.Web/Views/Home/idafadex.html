@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="~/Content/css/index.css" />
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="left">
+				<h1>最新资讯：</h1>
+				<div id="scroll-left">
+					<span id="left-div">当日累计实际产量195辆、效率99%、PPH99、警报次数</span>
+				</div>
+			</div>
+			<span class="right"><i id="date"></i> <b id="time"></b></span>
+		</div>
+		<div class="part-1">
+			<div class="left">
+				<h2>产量统计</h2>
+				<div class="wrap-table">
+					<div class="table-left"><img src="images/1.jpg"></div>
+					<div class="table-right"><img src="images/2.jpg"></div>
+				</div>
+			</div>
+			<div class="right">
+				<h2>警报次数</h2>
+				<div class="top">
+					<div class="hours">
+						<p>最近小时</p>
+						<div class="t_num">
+							<i></i>
+							<i></i>
+							<i class="last"></i>
+						</div>
+					</div>
+					<div class="total">
+						<p>当日累计</p>
+						<div class="t_num">
+							<i></i>
+							<i></i>
+							<i class="last"></i>
+						</div>
+					</div>
+				</div>
+				<div class="btm">
+					<div class="mass">
+						<p>质量异常</p>
+						<div class="t_num">
+							<i></i>
+							<i></i>
+							<i class="last"></i>
+						</div>
+					</div>
+					<div class="material">
+						<p>物料异常</p>
+						<div class="t_num">
+							<i></i>
+							<i></i>
+							<i class="last"></i>
+						</div>
+					</div>
+					<div class="beat">
+						<p>节拍异常</p>
+						<div class="t_num">
+							<i></i>
+							<i></i>
+							<i class="last"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="part-2">
+			<div class="left">
+				<ul class="top">
+					<li class="success">
+						<p>U1</p>
+						<div>
+							<span class="down"></span>
+						</div>
+					</li>
+					<li class="error-1">
+						<p>U3</p>
+						<div>
+							<span class="down"></span>
+						</div>						
+					</li>
+					<li class="error-2">
+						<p>U5</p>
+						<div>
+							<span class="down"></span>
+						</div>						
+					</li>
+					<li class="error-3">
+						<p>U7</p>
+						<div>
+							<span class="down"></span>
+						</div>						
+					</li>
+				</ul>
+				<div class="center">
+					<div id="wrap-img">
+						<span id="scroll-right"><i></i></span>
+					</div>
+					<div class="z1">z1</div>
+					<div class="z2">z2</div>
+					<div class="z3">z3</div>
+				</div>
+				<ul class="btm">
+					<li class="success">
+						<div>
+							<span class="up"></span>
+						</div>
+						<p>U2</p>
+					</li>
+					<li class="clock">
+						<div>
+							<span class="up"></span>
+						</div>	
+						<p>U4</p>					
+					</li>
+					<li class="clock">
+						<div>
+							<span class="up"></span>
+						</div>
+						<p>U6</p>						
+					</li>
+					<li class="success">
+						<div>
+							<span class="up"></span>
+						</div>	
+						<p>U8</p>					
+					</li>
+				</ul>
+			</div>
+			<div class="right">
+				<h2>型号: <span id="data-num">D341</span></h2>
+				<p><span  class="icon icon-gray">1</span>灰色为排</p>
+				<p><span  class="icon icon-orange">2</span>橙色常亮，缺物料</p>
+				<p><span  class="icon icon-green">3</span>绿色长亮，正常生产</p>
+				<p><span  class="icon icon-red">4</span>红色闪烁，产量异常</p>
+				<p><span  class="icon icon-orange">5</span>橙色闪烁，质量异常</p>
+				<p><span  class="icon icon-green">6</span>绿色闪烁，超出节拍生产</p>
+			</div>
+		</div>		
+	</div> 
+</body>
+
+<script type="text/javascript" src="~/Scripts/js/jq172.js"></script>
+<script type="text/javascript" src="~/Scripts/js/animateBackground-plugin.js"></script>
+<script type="text/javascript" src="~/Scripts/js/index.js"></script>
+</html>
