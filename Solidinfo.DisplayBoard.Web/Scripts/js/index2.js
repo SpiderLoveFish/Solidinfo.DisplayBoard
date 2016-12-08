@@ -210,7 +210,7 @@ function InitBarChart() {
             text: null
         },
         xAxis: {
-            categories: ['最近小时', '当日累计'],
+            categories: ['最近小时1', '当日累计'],
             title: {
                 text: null
             }

@@ -531,6 +531,7 @@
     <Content Include="Scripts\highcharts\js\themes\grid.js" />
     <Content Include="Scripts\highcharts\js\themes\sand-signika.js" />
     <Content Include="Scripts\highcharts\js\themes\skies.js" />
+    <Content Include="Scripts\js\index - Copy.js" />
     <Content Include="Scripts\js\index.js" />
     <Content Include="Scripts\js\index2.js" />
     <Content Include="Scripts\js\jq172.js" />
@@ -607,6 +608,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\Index - Copy.cshtml" />
+    <Content Include="Views\Home\Index - Copy %282%29.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -634,7 +637,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61220</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

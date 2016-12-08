@@ -64,6 +64,13 @@ namespace Solidinfo.DisplayBoard.Web.Controllers
         public StatisticsCount Real { get; set; }
         [XmlElement(ElementName = "Standard")]
         public StatisticsCount Standard { get; set; }
+        [XmlElement(ElementName = "JHSL")]
+        public StatisticsCount JHSL { get; set; }
+          [XmlElement(ElementName = "ChangeLine")]
+        public StatisticsCount ChangeLine { get; set; }
+    
+
+        
     }
     public class EfficiencyStatistics
     {
@@ -71,11 +78,14 @@ namespace Solidinfo.DisplayBoard.Web.Controllers
         public StatisticsCount Effciency { get; set; }
         [XmlElement(ElementName = "PPH")]
         public StatisticsCount PPH { get; set; }
+        [XmlElement(ElementName = "JHDCL")]
+        public StatisticsCount JHDCL { get; set; }
     }
     public class StatisticsCount
     {
         public int InDay { get; set; }
         public int InLastHour { get; set; }
+    
     }
     public class WarningCount
     {
@@ -84,21 +94,21 @@ namespace Solidinfo.DisplayBoard.Web.Controllers
         public int QuantityWarning { get; set; }
         public int MaterialWarning { get; set; }
         public int BeatWarning { get; set; }
+      
     }
     public class DeviceStatus
     {
-        public int U1 { get; set; }
-        public int U2 { get; set; }
-        public int U3 { get; set; }
-
-        public int U4 { get; set; }
-        public int U5 { get; set; }
-        public int U6 { get; set; }
-        public int U7 { get; set; }
-        public int U8 { get; set; }
-        public int Z1 { get; set; }
-        public int Z2 { get; set; }
-        public int Z3 { get; set; }
+        public int U1 { get; set; }  public string U1R { get; set; }
+        public int U2 { get; set; }   public string U2R { get; set; }
+        public int U3 { get; set; }   public string U3R { get; set; }
+        public int U4 { get; set; } public string U4R { get; set; }
+        public int U5 { get; set; } public string U5R { get; set; }
+        public int U6 { get; set; } public string U6R { get; set; }
+        public int U7 { get; set; } public string U7R { get; set; }
+        public int U8 { get; set; } public string U8R { get; set; }
+        public int Z1 { get; set; } public string Z1R { get; set; }
+        public int Z2 { get; set; } public string Z2R { get; set; }
+        public int Z3 { get; set; } public string Z3R { get; set; } 
         [XmlIgnore]
         public DeviceRunningStatus U1Status
         {
@@ -218,8 +228,10 @@ namespace Solidinfo.DisplayBoard.Web.Controllers
             var data = new ProductionData()
             {
                 GroupName = DefaultGroupName,
-                DeviceModel = string.Empty,
-                DeviceStatus = new DeviceStatus(),
+                DeviceModel = "C5500-DAYDREAM BLACK -17 UKFR",
+                DeviceStatus = new DeviceStatus() { 
+                U1=2,U1R="1,2,3"
+                },
                 EfficiencyStatistics = new EfficiencyStatistics()
                 {
                     Effciency = new StatisticsCount()
@@ -232,6 +244,12 @@ namespace Solidinfo.DisplayBoard.Web.Controllers
                         InDay = 8,
                         InLastHour = 81
                     },
+                    JHDCL = new StatisticsCount()
+                    {
+                        InDay = 8,
+                        InLastHour = 81
+                    }
+
                 },
                 ProductionStatistics = new ProductionStatistics()
                 {
@@ -240,13 +258,26 @@ namespace Solidinfo.DisplayBoard.Web.Controllers
                         InDay = 10,
                         InLastHour = 112
                     },
+
                     Standard = new StatisticsCount()
                     {
                         InDay = 21,
                         InLastHour = 218
                     },
+                    JHSL = new StatisticsCount()
+                    {
+                        InDay = 8,
+                        InLastHour = 81
+                    },
+                    ChangeLine = new StatisticsCount()
+                    {
+                        InDay = 8,
+                        InLastHour = 81
+                    }
+
                 },
                 LastNews = "最新消息",
+
                 WarningCount = new WarningCount()
                 {
                     BeatWarning = 2,
