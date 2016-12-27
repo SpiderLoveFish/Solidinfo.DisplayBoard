@@ -178,6 +178,7 @@ function getdata() {
                 }
 
             }
+            data = null;
         }
     });
 };
@@ -213,8 +214,9 @@ function ABCD(o,remark)
         for (var i = 1; i <= 3; i++)
             {
             $("#" + o + i).text(remark.split(",")[i - 1]);
-            if (remark.split(",")[i - 1]=="0"||remark.split(",")[i - 1]=="")
-                $("#" + o + i).removeAttr("class").addClass("box");
+            if (remark.split(",")[i - 1] == "0" || remark.split(",")[i - 1] == "")
+                //$("#" + o + i).removeAttr("class").addClass("box");
+            { }
             else $("#" + o + i).removeAttr("class").addClass("box-" + i);
            
         }
@@ -233,7 +235,7 @@ var lfootChart;
 $(function () {
     getdata();
 
-    setInterval('getdata()', 5000);//每隔3秒执行一次 
+    setInterval('getdata()', 20000);//每隔20秒执行一次 
 });
 
 function FlushChart(data1, data2) {
