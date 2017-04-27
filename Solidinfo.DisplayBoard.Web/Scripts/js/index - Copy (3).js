@@ -154,27 +154,27 @@ function getdata() {
                 show_num(data.WarningCount.QuantityWarning, ".mass i", 44);
                 show_num(data.WarningCount.MaterialWarning, ".material i", 44);
                 show_num(data.WarningCount.BeatWarning, ".beat i", 44);
-                Abc("U1", data.DeviceStatus.U1);  ABCD("U1", data.DeviceStatus.U1R);
-                Abc("U2", data.DeviceStatus.U2);  ABCD("U2", data.DeviceStatus.U2R);
-               Abc("U3", data.DeviceStatus.U3);   ABCD("U3", data.DeviceStatus.U3R);
-               Abc("U4", data.DeviceStatus.U4);  ABCD("U4", data.DeviceStatus.U4R);
-               Abc("U5", data.DeviceStatus.U5);  ABCD("U5", data.DeviceStatus.U5R);
-               Abc("U6", data.DeviceStatus.U6);   ABCD("U6", data.DeviceStatus.U6R);
-               Abc("U7", data.DeviceStatus.U7);  ABCD("U7", data.DeviceStatus.U7R);
-               Abc("U8", data.DeviceStatus.U8);  ABCD("U8", data.DeviceStatus.U8R);
-               Abc("z1", data.DeviceStatus.Z1);   ABCD("Z1", data.DeviceStatus.Z1R);
-               Abc("z2", data.DeviceStatus.Z2);  ABCD("Z2", data.DeviceStatus.Z2R);
-               Abc("z3", data.DeviceStatus.Z3);  ABCD("Z3", data.DeviceStatus.Z3R);
+                Abc("U1", data.DeviceStatus.U1); //ABCD("U1", data.DeviceStatus.U1R);
+                Abc("U2", data.DeviceStatus.U2); // ABCD("U2", data.DeviceStatus.U2R);
+               Abc("U3", data.DeviceStatus.U3);  //ABCD("U3", data.DeviceStatus.U3R);
+               Abc("U4", data.DeviceStatus.U4); //ABCD("U4", data.DeviceStatus.U4R);
+               Abc("U5", data.DeviceStatus.U5); //ABCD("U5", data.DeviceStatus.U5R);
+               Abc("U6", data.DeviceStatus.U6);  //ABCD("U6", data.DeviceStatus.U6R);
+               Abc("U7", data.DeviceStatus.U7);// ABCD("U7", data.DeviceStatus.U7R);
+               Abc("U8", data.DeviceStatus.U8); //ABCD("U8", data.DeviceStatus.U8R);
+               Abc("z1", data.DeviceStatus.Z1); // ABCD("Z1", data.DeviceStatus.Z1R);
+               Abc("z2", data.DeviceStatus.Z2);// ABCD("Z2", data.DeviceStatus.Z2R);
+               Abc("z3", data.DeviceStatus.Z3);// ABCD("Z3", data.DeviceStatus.Z3R);
                 //alert(data.DeviceStatus.U1R);
                 //$("#U1JP").text(data.DeviceStatus.U1R.split(",")[0]);
                 //$("#U1ZL").text(data.DeviceStatus.U1R.split(",")[1]);
                 //$("#U1WL").text(data.DeviceStatus.U1R.split(",")[2]);
-             //新闻
-                //if (lastNews != data.LastNews) {
-                //    //alert(data.LastNews);
-                //    lastNews = data.LastNews;
-                //    topScroll(lastNews);
-                //}
+             
+                if (lastNews != data.LastNews) {
+                    //alert(data.LastNews);
+                    lastNews = data.LastNews;
+                    topScroll(lastNews);
+                }
                 if (lastDeviceModel != data.DeviceModel) {
                     lastDeviceModel = data.DeviceModel;
                     var showText = lastDeviceModel;
@@ -220,33 +220,32 @@ function announcement()
     var str =window.location.href;
     var index = str.lastIndexOf("\/");
     str = str.substring(index + 1, str.length);
-    var tips = "";
-   // var ul = document.getElementById('topdownul');
-  //  ul.innerHTML = "";
+     
+    var ul = document.getElementById('topdownul');
+    ul.innerHTML = "";
     $.ajax({
         url: ajaxUrlAnn, type: "POST",
         data: { GroupID: str },
         success: function (responseText) {
             //alert(responseText);
             var data = eval(responseText);
-            //for (var ii = 0; ii < 20; ii++) {
-            //    ul.innerHTML += '<li> <p>暂时无报警数据！</p></li>';
-            //}
+            for (var ii = 0; ii < 20; ii++) {
+                ul.innerHTML += '<li> <p>暂时无报警数据！</p></li>';
+            }
             if (data == undefined || data.length<=0) {
-               // ul.innerHTML += '<li> <p>暂时无报警数据！</p></li>';
-                tips += "暂时无报警数据！";
+                ul.innerHTML += '<li> <p>暂时无报警数据！</p></li>';
             } else {
                 
                 $.each(data, function (commentIndex, comment) {
-                    tips += comment['DeviceID'] + "(" + comment['dotime'] + ")" + '【' + comment['LightName'] + '】 ' + comment['ygmc'] + comment['DoStatus']+"  ";
-                    //ul.innerHTML += '<li> <p><a>' + comment['DeviceID'] + '【' + comment['LightName'] + '】</a><br><a>' + comment['ygmc'] +
-                        //  '</a><a class="btn_lh">' + comment['DoStatus'] + ' </a></p></li>';
+                   
+                    ul.innerHTML += '<li> <p><a>' + comment['DeviceID'] + '【' + comment['LightName'] + '】</a><br><a>' + comment['ygmc'] +
+                          '</a><a class="btn_lh">' + comment['DoStatus'] + ' </a></p></li>';
                   
                 });
-              
+               
                 //topdown();
             }
-            topScroll(tips);//新闻切换为异常报警
+           
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
            // alert(XMLHttpRequest.status);
@@ -433,7 +432,7 @@ function InitBarChart(data1, data2) {
 
               {
                   name: '实际PCS',
-                  data: [{ y: jhsl, color: '#00b0f0', borderColor: '#00b0f0' }, { y: num2, color: '#87bb4f', borderColor: '#87bb4f' }, { y: num1, color: '#87bb4f', borderColor: '#87bb4f' }]
+                  data: [{ y: jhsl, color: '#87bb4f', borderColor: '#87bb4f' }, { y: num2, color: '#87bb4f', borderColor: '#87bb4f' }, { y: num1, color: '#87bb4f', borderColor: '#87bb4f' }]
               }, {
                   name: '标准PCS',
                   data: [{}, { y: num4, color: '#00b0f0', borderColor: '#00b0f0' }, { y: num3, color: '#00b0f0', borderColor: '#00b0f0' }]

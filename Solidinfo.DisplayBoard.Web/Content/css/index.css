@@ -220,6 +220,7 @@ h1 {
 .part-2 .center {
 	position: relative;
 	padding-left: 23px;
+    margin-top: -8px;
 	width: 677px;
 	height: 49px;
 }
@@ -340,11 +341,33 @@ h1 {
  margin: 0 auto; float: right; width: 20px; height: 20px; line-height: 20px; border-radius: 12px; font-size: 16px; text-align: center; background: #f00; color: #fff; 
  position:relative;  behavior: url(../../Content/css/PIE.htc);}
 .box-2 {
-	  margin: 0 auto; float: right; width: 20px; height: 20px; line-height: 20px; border-radius: 12px; font-size: 16px; background: #f3740d; color: #fff;  
+	  margin: 0 auto; float: right; width: 20px; height: 20px; line-height: 20px; border-radius: 12px; font-size: 16px; background: #f00; color: #fff;  
   position:relative; behavior: url(../../Content/css/PIE.htc);}
 .box-1 {
- margin: 0 auto; float: right; width: 20px; height: 20px; line-height: 20px; border-radius: 12px; font-size: 16px; background: #f3740d; color: #fff; 
+ margin: 0 auto; float: right; width: 20px; height: 20px; line-height: 20px; border-radius: 12px; font-size: 16px; background: #f00; color: #fff; 
  position:relative;  behavior: url(../../Content/css/PIE.htc);}
  .box {
  margin: 0 auto; float: right; width: 20px; height: 20px; line-height: 20px; border-radius: 12px; font-size: 16px; background: #4c4c4c; color: #fff; 
  position:relative;  behavior: url(../../Content/css/PIE.htc);}
+
+
+ ul,li,dl,ol{list-style:none;}
+.boxlist{ width:240px; margin:0 auto;}
+.bcon{ width:240px;  margin:10px auto;}
+.bcon h1{ border-bottom:0px solid #eee; padding:0 10px;}
+.bcon h1 b{ font:bold 14px/40px '宋体'; color:#FF3300; border-top:2px solid #3492D1; padding:0 8px; margin-top:-1px; display:inline-block;}
+
+.list_lh{ border-bottom:0px solid #eee; height:260px; width:240px; overflow:hidden;}
+.list_lh li{ padding:10px;width:220px; }
+.list_lh li.lieven{ background:#F0F2F3;}
+.list_lh li p{ height:24px; line-height:24px;}
+.list_lh li p a{ float:left;}
+.list_lh li p em{ width:80px; font:normal 12px/24px Arial; color:#FF3300; float:right; display:inline-block;}
+.list_lh li p span{ color:#999; float:right;}
+.list_lh li p a.btn_lh{ background:#28BD19; height:17px; line-height:17px; color:#fff; padding:0 5px; margin-top:4px; display:inline-block; float:right;}
+.btn_lh:hover{ color:#fff; text-decoration:none;}
+
+.btm p{ font:normal 12px/24px 'Microsoft YaHei'; text-align:center;}
+
+.clearfix:after{display: block;height:100%;_height:100%;clear:both;content:'\020';}
+.clearfix{zoom:1;}
